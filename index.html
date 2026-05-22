@@ -414,13 +414,7 @@ border-radius:15px;
 
 .nav-links.active{
 display:flex;
-}
-  footer{
-width:100%;
-   text-align: centre;
-    color:white;
-    padding: 20px;
-  }
+} 
 }
 </style>
 </head>
@@ -657,7 +651,7 @@ that drive business growth.
 </section>
 
 <footer>
-<p> 2026 &copy Saifullah Muhammad • Data Analyst </p>
+<p id = "year"><span id = "year"></span> &copy DataUniverse. Alright reserved </p>
 </footer>
 
 <script>
@@ -757,6 +751,7 @@ result.style.color="green";
 
 e.target.reset();
 });
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
