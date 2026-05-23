@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saifullah Muhammad | DataUniverse</title>
+<title>Saifullah Muhammad | DataU</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -34,133 +34,16 @@ header{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,255,255,.
 .typing{color:var(--secondary);font-weight:600;height:30px;margin:10px 0}
 .btn{display:inline-block;margin-top:20px;padding:14px 24px;border-radius:12px;background:linear-gradient(45deg,var(--primary),var(--secondary));color:#fff;text-decoration:none}
 .hero img{width:320px;height:320px;border-radius:50%;object-fit:cover;display:block;margin:auto}
-section{
-padding:100px 0;
-}
-.about{
-padding:35px;
-border-radius:20px;
-line-height:1.9;
-.section-title{
-text-align:center;
-font-size:2.5rem;
-margin-bottom:50px;
-font-weight:800;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.stat{
-padding:30px;
-border-radius:20px;
-text-align:center;
-}
-
-.stat h3{
-font-size:2.5rem;
-color:var(--primary);
-}
-
-.about{
-padding:35px;
-border-radius:20px;
-line-height:1.9;
-}
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.skill{
-padding:20px;
-border-radius:15px;
-}
-
-.skill-head{
-display:flex;
-justify-content:space-between;
-margin-bottom:10px;
-}
-
-.bar{
-height:10px;
-background:#cbd5e1;
-border-radius:20px;
-overflow:hidden;
-}
-
-.fill{
-height:100%;
-background:linear-gradient(45deg,var(--primary),var(--secondary));
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.project{
-overflow:hidden;
-border-radius:20px;
-transition:.3s;
-}
-
-.project:hover{
-transform:translateY(-8px);
-}
-
-.project img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.project-content{
-padding:20px;
-}
-
-.timeline{
-max-width:800px;
-margin:auto;
-position:relative;
-}
-
-.timeline::before{
-content:'';
-position:absolute;
-width:4px;
-background:var(--primary);
-top:0;
-bottom:0;
-left:50%;
-transform:translateX(-50%);
-}
-
-.event{
-width:50%;
-padding:20px 40px;
-position:relative;
-}
-
-.event:nth-child(odd){
-left:0;
-}
-
-.event:nth-child(even){
-left:50%;
-}
-
-.event-box{
-padding:20px;
-border-radius:15px;
-}
+section{padding:70px 0}
+.title{text-align:center;font-size:2.2rem;margin-bottom:30px}
+.stats,.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{padding:24px}
+.stat{text-align:center}
+.stat h3{font-size:2rem;color:var(--primary)}
+.bar{height:10px;background:#cbd5e1;border-radius:10px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(45deg,var(--primary),var(--secondary))}
+.timeline{max-width:800px;margin:auto}
+.event{margin-bottom:20px;padding:20px}
 form{display:flex;flex-direction:column;gap:12px}
 input,textarea{padding:14px;border-radius:10px;border:1px solid #ccc;background:transparent;color:var(--text)}
 footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
@@ -169,14 +52,13 @@ footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
 .nav-links{position:fixed;right:-260px;top:72px;flex-direction:column;padding:20px;width:230px;background:var(--card);transition:.3s}
 .nav-links.active{right:10px}
 .hero-content{grid-template-columns:1fr;text-align:center}
-
 }
 </style>
 </head>
 <body>
 <header>
 <div class="container navbar">
-<div class="logo">Data4Insight</div>
+<div class="logo">DataU</div>
 <div class="nav-links glass" id="nav">
 <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
 </div>
@@ -207,93 +89,27 @@ footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
 <div class="glass card stat"><h3>50+</h3><p>Clients</p></div>
 </div></section>
 
-<section id="about">
-<div class="container">
-<h2 class="section-title">About Me</h2>
+<section id="about"><div class="container"><h2 class="title">About Me</h2><div class="glass card">I help businesses make better decisions through data. My expertise includes SQL, Python, Power BI, Tableau, Excel and statistical analysis.</div></div></section>
 
-<div class="about glass reveal">
-I help businesses make better decisions through data.
-My expertise includes SQL, Python, Power BI, Tableau,
-Excel and statistical analysis. I build interactive dashboards,
-automate reporting processes and uncover meaningful trends
-that drive business growth.
-</div>
-</div>
-</section>
 <section id="skills"><div class="container"><h2 class="title">Skills</h2><div class="skills">
 <div class="glass card">SQL 95%<div class="bar"><div class="fill" style="width:95%"></div></div></div>
 <div class="glass card">Python 92%<div class="bar"><div class="fill" style="width:92%"></div></div></div>
 <div class="glass card">Power BI 96%<div class="bar"><div class="fill" style="width:96%"></div></div></div>
 <div class="glass card">Tableau 88%<div class="bar"><div class="fill" style="width:88%"></div></div></div>
 </div></div></section>
-<section id="projects">
-<div class="container">
 
-<h2 class="section-title">Featured Projects</h2>
+<section id="projects"><div class="container"><h2 class="title">Featured Projects</h2><div class="projects">
+<div class="glass card"><h3>Sales Performance Dashboard</h3><p>Interactive Power BI dashboard tracking KPIs and sales trends.</p></div>
+<div class="glass card"><h3>Customer Segmentation</h3><p>Machine learning model for customer classification.</p></div>
+<div class="glass card"><h3>Financial Forecasting</h3><p>Predictive analytics solution for revenue forecasting.</p></div>
+</div></div></section>
 
-<div class="projects">
+<section id="experience"><div class="container"><h2 class="title">Experience</h2><div class="timeline">
+<div class="glass event"><h3>Senior Data Analyst</h3><p>2023 – Present</p></div>
+<div class="glass event"><h3>Business Intelligence Analyst</h3><p>2021 – 2023</p></div>
+<div class="glass event"><h3>Junior Data Analyst</h3><p>2018 – 2021</p></div>
+</div></div></section>
 
-<div class="project glass reveal">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000">
-<div class="project-content">
-<h3>Sales Performance Dashboard</h3>
-<p>Interactive Power BI dashboard tracking KPIs and sales trends.</p>
-</div>
-</div>
-
-<div class="project glass reveal">
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000">
-<div class="project-content">
-<h3>Customer Segmentation</h3>
-<p>Machine learning model for customer classification.</p>
-</div>
-</div>
-
-<div class="project glass reveal">
-<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1000">
-<div class="project-content">
-<h3>Financial Forecasting</h3>
-<p>Predictive analytics solution for revenue forecasting.</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="experience">
-<div class="container">
-<h2 class="section-title">Experience</h2>
-
-<div class="timeline">
-
-<div class="event">
-<div class="event-box glass">
-<h3>Senior Data Analyst</h3>
-<p>ABC Corporation</p>
-<p>2023 – Present</p>
-</div>
-</div>
-
-<div class="event">
-<div class="event-box glass">
-<h3>Business Intelligence Analyst</h3>
-<p>Insight Analytics</p>
-<p>2021 – 2023</p>
-</div>
-</div>
-
-<div class="event">
-<div class="event-box glass">
-<h3>Junior Data Analyst</h3>
-<p>Data Solutions Ltd.</p>
-<p>2018 – 2021</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
 <section id="contact"><div class="container"><h2 class="title">Contact</h2><div class="glass card">
 <form><input placeholder="Your Name"><input placeholder="Your Email"><textarea rows="5" placeholder="Your Message"></textarea><button class="btn">Send Message</button></form>
 </div></div></section>
