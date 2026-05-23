@@ -56,6 +56,7 @@ background:var(--card);
 backdrop-filter:blur(12px);
 border:1px solid var(--border);
 box-shadow:var(--shadow);
+width: 100%;
 }
 
 header{
@@ -374,9 +375,9 @@ transform:none;
    TABLETS
 ========================== */
 @media (max-width: 900px){
-topheader{
-    width: 100%;
-}
+        .glass{
+        width:100%;
+    }
     .container{
         width:95%;
     }
@@ -444,9 +445,9 @@ topheader{
    MOBILE PHONES
 ========================== */
 @media (max-width: 600px){
-topheader{
-    width: 100%;
-}
+        .glass{
+        width:100%;
+    }
     section{
         padding:70px 0;
     }
@@ -534,10 +535,10 @@ topheader{
    VERY SMALL DEVICES
 ========================== */
 @media (max-width: 400px){
-.topheader{
-    width: 100%;
-}
-    .hero h3{
+    .glass{
+        width:100%;
+    }
+  .hero h3{
         font-size:1.9rem;
     }
 
@@ -566,10 +567,9 @@ topheader{
 </style>
 </head>
 <body>
-<div class = "topheader">
 <header class="glass">
 <nav class="navbar">
-<div class="logo">DataUniverse</div>
+<div class="logo">DataU</div>
 
 <div class="nav-links glass" id="nav">
 <a href="#about">About</a>
@@ -585,7 +585,6 @@ topheader{
 </div>
 </nav>
 </header>
-</div>
     
 <section class="hero">
 <div class="container hero-content">
@@ -800,7 +799,7 @@ that drive business growth.
 </div>
 </div>
 </section>
-<footer><
+<footer>
 <p>&copy; <span id="year"></span> Saifullah M. All Rights Reserved.</p>
 </footer>
 <script>
