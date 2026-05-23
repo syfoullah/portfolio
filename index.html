@@ -1,125 +1,1150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saifullah Muhammad | DataU</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saifullah Muhammad | Premium Data Analyst Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
 :root{
---primary:#4f46e5;--secondary:#06b6d4;--bg:#f8fafc;--text:#1e293b;
---muted:#64748b;--card:rgba(255,255,255,.8);--border:rgba(255,255,255,.3);
+--bg:#050816;
+--bg2:#0b1120;
+--card:rgba(255,255,255,0.06);
+--glass:rgba(255,255,255,0.08);
+--border:rgba(255,255,255,0.12);
+--text:#f8fafc;
+--muted:#94a3b8;
+--primary:#7c3aed;
+--secondary:#06b6d4;
+--accent:#22c55e;
+--shadow:0 10px 40px rgba(0,0,0,.35);
 }
-.dark{
---bg:#020617;--text:#f8fafc;--muted:#94a3b8;
---card:rgba(15,23,42,.85);--border:rgba(255,255,255,.08);
+
+.light{
+--bg:#f8fafc;
+--bg2:#ffffff;
+--card:rgba(255,255,255,0.8);
+--glass:rgba(255,255,255,0.7);
+--border:rgba(15,23,42,.08);
+--text:#0f172a;
+--muted:#475569;
+--shadow:0 10px 30px rgba(15,23,42,.08);
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{overflow-x:hidden}
-body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
-.container{width:min(1100px,92%);margin:auto}
-.glass{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:20px}
-header{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,255,255,.85);backdrop-filter:blur(12px)}
-.dark header{background:rgba(2,6,23,.9)}
-.navbar{height:72px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(45deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links{display:flex;gap:24px}
-.nav-links a{text-decoration:none;color:var(--text)}
-.actions button{border:none;padding:10px;border-radius:10px;background:var(--primary);color:#fff;cursor:pointer}
-.menu-btn{display:none}
-.hero{padding:130px 0 80px}
-.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hero h1{font-size:3.2rem}
-.hero p{color:var(--muted);line-height:1.8}
-.typing{color:var(--secondary);font-weight:600;height:30px;margin:10px 0}
-.btn{display:inline-block;margin-top:20px;padding:14px 24px;border-radius:12px;background:linear-gradient(45deg,var(--primary),var(--secondary));color:#fff;text-decoration:none}
-.hero img{width:320px;height:320px;border-radius:50%;object-fit:cover;display:block;margin:auto}
-section{padding:70px 0}
-.title{text-align:center;font-size:2.2rem;margin-bottom:30px}
-.stats,.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{padding:24px}
-.stat{text-align:center}
-.stat h3{font-size:2rem;color:var(--primary)}
-.bar{height:10px;background:#cbd5e1;border-radius:10px;overflow:hidden}
-.fill{height:100%;background:linear-gradient(45deg,var(--primary),var(--secondary))}
-.timeline{max-width:800px;margin:auto}
-.event{margin-bottom:20px;padding:20px}
-form{display:flex;flex-direction:column;gap:12px}
-input,textarea{padding:14px;border-radius:10px;border:1px solid #ccc;background:transparent;color:var(--text)}
-footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
-@media(max-width:900px){
-.menu-btn{display:inline-block}
-.nav-links{position:fixed;right:-260px;top:72px;flex-direction:column;padding:20px;width:230px;background:var(--card);transition:.3s}
-.nav-links.active{right:10px}
-.hero-content{grid-template-columns:1fr;text-align:center}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+transition:.35s ease;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle, rgba(124,58,237,.25), transparent 60%);
+top:-250px;
+right:-150px;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(6,182,212,.18), transparent 60%);
+bottom:-250px;
+left:-200px;
+z-index:-1;
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.glass{
+background:var(--glass);
+backdrop-filter:blur(18px);
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding:18px 0;
+background:rgba(5,8,22,.5);
+backdrop-filter:blur(16px);
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.light header{
+background:rgba(255,255,255,.7);
+}
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:1.7rem;
+font-weight:900;
+letter-spacing:.5px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav-links{
+display:flex;
+gap:32px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-size:.95rem;
+font-weight:500;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+transition:.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.actions{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.icon-btn{
+width:44px;
+height:44px;
+border:none;
+border-radius:14px;
+cursor:pointer;
+background:var(--card);
+color:var(--text);
+font-size:1rem;
+}
+
+.menu-btn{
+display:none;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding-top:100px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+align-items:center;
+gap:70px;
+}
+
+.hero-badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 18px;
+border-radius:999px;
+margin-bottom:28px;
+font-size:.9rem;
+font-weight:600;
+color:#fff;
+background:linear-gradient(90deg, rgba(124,58,237,.25), rgba(6,182,212,.2));
+border:1px solid rgba(255,255,255,.1);
+}
+
+.hero h1{
+font-size:4.5rem;
+line-height:1;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.typing{
+height:40px;
+font-size:1.35rem;
+font-weight:700;
+color:var(--secondary);
+margin-bottom:24px;
+}
+
+.hero p{
+font-size:1.05rem;
+line-height:1.9;
+color:var(--muted);
+max-width:650px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 28px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+display:inline-flex;
+align-items:center;
+gap:10px;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+box-shadow:0 10px 30px rgba(124,58,237,.35);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+background:transparent;
+border:1px solid var(--border);
+color:var(--text);
+}
+
+.hero-image{
+position:relative;
+display:flex;
+justify-content:center;
+}
+
+.hero-image::before{
+content:"";
+position:absolute;
+width:360px;
+height:360px;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+border-radius:30px;
+transform:rotate(-8deg);
+filter:blur(0px);
+opacity:.8;
+}
+
+.hero-image img{
+position:relative;
+width:350px;
+height:430px;
+object-fit:cover;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 25px 80px rgba(0,0,0,.45);
+}
+
+.floating-card{
+position:absolute;
+padding:16px 18px;
+border-radius:20px;
+background:rgba(15,23,42,.75);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.light .floating-card{
+background:rgba(255,255,255,.9);
+}
+
+.card1{
+left:-10px;
+bottom:30px;
+}
+
+.card2{
+right:-10px;
+top:30px;
+}
+
+.floating-card h4{
+font-size:1.2rem;
+margin-bottom:4px;
+}
+
+section{
+padding:110px 0;
+position:relative;
+}
+
+.section-title{
+font-size:3rem;
+font-weight:900;
+text-align:center;
+margin-bottom:18px;
+}
+
+.section-sub{
+text-align:center;
+max-width:700px;
+margin:auto;
+color:var(--muted);
+line-height:1.8;
+margin-bottom:60px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+margin-top:-80px;
+}
+
+.stat-card{
+padding:34px;
+border-radius:28px;
+text-align:center;
+}
+
+.stat-card h2{
+font-size:3rem;
+margin-bottom:10px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.about-card{
+padding:40px;
+border-radius:30px;
+}
+
+.about-card h3{
+font-size:1.7rem;
+margin-bottom:20px;
+}
+
+.about-card p{
+line-height:1.9;
+color:var(--muted);
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card{
+padding:28px;
+border-radius:26px;
+transition:.35s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+.skill-top{
+display:flex;
+justify-content:space-between;
+margin-bottom:18px;
+font-weight:700;
+}
+
+.progress{
+height:12px;
+background:rgba(255,255,255,.08);
+border-radius:999px;
+overflow:hidden;
+}
+
+.progress-fill{
+height:100%;
+border-radius:999px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
+}
+
+.project-card{
+overflow:hidden;
+border-radius:30px;
+transition:.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-image{
+height:220px;
+background:linear-gradient(135deg,#312e81,#0f172a,#0891b2);
+position:relative;
+overflow:hidden;
+}
+
+.project-image::before{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:rgba(255,255,255,.08);
+border-radius:50%;
+top:-80px;
+right:-60px;
+}
+
+.project-content{
+padding:28px;
+}
+
+.project-content h3{
+font-size:1.4rem;
+margin-bottom:14px;
+}
+
+.project-content p{
+color:var(--muted);
+line-height:1.8;
+margin-bottom:22px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.tag{
+padding:8px 14px;
+border-radius:999px;
+background:rgba(124,58,237,.15);
+font-size:.85rem;
+font-weight:600;
+}
+
+.timeline{
+position:relative;
+max-width:850px;
+margin:auto;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+width:2px;
+height:100%;
+background:rgba(255,255,255,.08);
+transform:translateX(-50%);
+}
+
+.timeline-item{
+width:calc(50% - 30px);
+padding:30px;
+border-radius:28px;
+margin-bottom:35px;
+position:relative;
+}
+
+.timeline-item:nth-child(odd){
+margin-right:auto;
+}
+
+.timeline-item:nth-child(even){
+margin-left:auto;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+top:35px;
+width:18px;
+height:18px;
+border-radius:50%;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+.timeline-item:nth-child(odd)::before{
+right:-40px;
+}
+
+.timeline-item:nth-child(even)::before{
+left:-40px;
+}
+
+.timeline-item h3{
+margin-bottom:10px;
+}
+
+.timeline-item span{
+color:var(--secondary);
+font-weight:700;
+display:block;
+margin-bottom:10px;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.contact-card{
+padding:40px;
+border-radius:30px;
+}
+
+.contact-card h3{
+margin-bottom:20px;
+font-size:1.8rem;
+}
+
+.contact-card p{
+color:var(--muted);
+line-height:1.8;
+margin-bottom:28px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+input,textarea{
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+color:var(--text);
+font-family:inherit;
+outline:none;
+}
+
+input:focus,textarea:focus{
+border-color:var(--secondary);
+}
+
+.submit-btn{
+border:none;
+cursor:pointer;
+}
+
+footer{
+padding:40px 0;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.06);
+color:var(--muted);
+}
+
+.socials{
+display:flex;
+gap:14px;
+margin-top:25px;
+}
+
+.social{
+width:48px;
+height:48px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:16px;
+text-decoration:none;
+background:rgba(255,255,255,.06);
+color:#fff;
+font-weight:700;
+}
+
+.light .social{
+color:#0f172a;
+}
+
+@media(max-width:980px){
+
+.hero-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-item{
+width:100%;
+padding-left:70px;
+}
+
+.timeline-item::before{
+left:12px !important;
+}
+
+.hero h1{
+font-size:3.2rem;
+}
+
+.nav-links{
+position:fixed;
+top:90px;
+right:-100%;
+width:280px;
+padding:30px;
+border-radius:24px;
+flex-direction:column;
+background:rgba(15,23,42,.95);
+transition:.35s;
+}
+
+.nav-links.active{
+right:20px;
+}
+
+.menu-btn{
+display:block;
+}
+}
+
+@media(max-width:650px){
+
+.hero{
+padding-top:140px;
+}
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-image img{
+width:100%;
+max-width:330px;
+height:400px;
+}
 }
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="container navbar">
+
 <div class="logo">DataU</div>
-<div class="nav-links glass" id="nav">
-<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+
+<div class="nav-links glass" id="navLinks">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
 </div>
+
 <div class="actions">
-<button id="theme">🌙</button>
-<button class="menu-btn" id="menu">☰</button>
+<button class="icon-btn" id="themeBtn">🌙</button>
+<button class="icon-btn menu-btn" id="menuBtn">☰</button>
 </div>
+
 </div>
 </header>
 
 <section class="hero">
-<div class="container hero-content">
+
+<div class="container hero-grid">
+
 <div>
-<h3>Hello, I'm</h3>
-<h1>Saifullah Muhammad</h1>
-<div class="typing" id="typing"></div>
-<p>Data Analyst passionate about transforming raw data into actionable insights. Specialized in dashboard development, data visualization, predictive analytics and business intelligence.</p>
-<a href="#" class="btn">Download CV</a>
+
+<div class="hero-badge">
+✨ Premium Data Analytics Portfolio
 </div>
-<div><img src="Syfoullah.png" alt="Saifullah Muhammad"></div>
+
+<h1>
+Turning <span>Data</span> Into Strategic Business Growth
+</h1>
+
+<div class="typing" id="typing"></div>
+
+<p>
+I help businesses unlock growth through advanced analytics, interactive dashboards, predictive modeling, and data-driven strategy. Specialized in Power BI, SQL, Python, Tableau, and business intelligence solutions.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn btn-primary">Download CV</a>
+<a href="#projects" class="btn btn-secondary">View Projects</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="Syfoullah.png" alt="Saifullah Muhammad">
+
+<div class="floating-card card1">
+<h4>120+</h4>
+<p>Projects Delivered</p>
+</div>
+
+<div class="floating-card card2">
+<h4>96%</h4>
+<p>Client Satisfaction</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
-<section><div class="container stats">
-<div class="glass card stat"><h3>120+</h3><p>Projects</p></div>
-<div class="glass card stat"><h3>8+</h3><p>Years Experience</p></div>
-<div class="glass card stat"><h3>35+</h3><p>Dashboards</p></div>
-<div class="glass card stat"><h3>50+</h3><p>Clients</p></div>
-</div></section>
+<section>
 
-<section id="about"><div class="container"><h2 class="title">About Me</h2><div class="glass card">I help businesses make better decisions through data. My expertise includes SQL, Python, Power BI, Tableau, Excel and statistical analysis.</div></div></section>
+<div class="container">
 
-<section id="skills"><div class="container"><h2 class="title">Skills</h2><div class="skills">
-<div class="glass card">SQL 95%<div class="bar"><div class="fill" style="width:95%"></div></div></div>
-<div class="glass card">Python 92%<div class="bar"><div class="fill" style="width:92%"></div></div></div>
-<div class="glass card">Power BI 96%<div class="bar"><div class="fill" style="width:96%"></div></div></div>
-<div class="glass card">Tableau 88%<div class="bar"><div class="fill" style="width:88%"></div></div></div>
-</div></div></section>
+<div class="stats">
 
-<section id="projects"><div class="container"><h2 class="title">Featured Projects</h2><div class="projects">
-<div class="glass card"><h3>Sales Performance Dashboard</h3><p>Interactive Power BI dashboard tracking KPIs and sales trends.</p></div>
-<div class="glass card"><h3>Customer Segmentation</h3><p>Machine learning model for customer classification.</p></div>
-<div class="glass card"><h3>Financial Forecasting</h3><p>Predictive analytics solution for revenue forecasting.</p></div>
-</div></div></section>
+<div class="glass stat-card">
+<h2>120+</h2>
+<p>Projects Completed</p>
+</div>
 
-<section id="experience"><div class="container"><h2 class="title">Experience</h2><div class="timeline">
-<div class="glass event"><h3>Senior Data Analyst</h3><p>2023 – Present</p></div>
-<div class="glass event"><h3>Business Intelligence Analyst</h3><p>2021 – 2023</p></div>
-<div class="glass event"><h3>Junior Data Analyst</h3><p>2018 – 2021</p></div>
-</div></div></section>
+<div class="glass stat-card">
+<h2>8+</h2>
+<p>Years Experience</p>
+</div>
 
-<section id="contact"><div class="container"><h2 class="title">Contact</h2><div class="glass card">
-<form><input placeholder="Your Name"><input placeholder="Your Email"><textarea rows="5" placeholder="Your Message"></textarea><button class="btn">Send Message</button></form>
-</div></div></section>
+<div class="glass stat-card">
+<h2>35+</h2>
+<p>Dashboards Built</p>
+</div>
 
-<footer>© <span id="year"></span> Saifullah Muhammad. All Rights Reserved.</footer>
+<div class="glass stat-card">
+<h2>50+</h2>
+<p>Global Clients</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<p class="section-sub">
+Passionate about helping companies make smarter decisions through modern analytics and business intelligence solutions.
+</p>
+
+<div class="about-grid">
+
+<div class="glass about-card">
+<h3>Who I Am</h3>
+
+<p>
+I'm Saifullah Muhammad, a professional Data Analyst and BI Specialist focused on transforming complex data into meaningful insights. My expertise spans SQL, Python, Power BI, Tableau, Excel, and predictive analytics.
+</p>
+
+</div>
+
+<div class="glass about-card">
+<h3>My Mission</h3>
+
+<p>
+I design premium analytical solutions that empower organizations to optimize performance, forecast trends, improve customer experience, and drive sustainable business growth through data.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">Technical Expertise</h2>
+
+<p class="section-sub">
+Advanced analytical and visualization technologies used to deliver enterprise-grade insights.
+</p>
+
+<div class="skills-grid">
+
+<div class="glass skill-card">
+
+<div class="skill-top">
+<span>SQL</span>
+<span>95%</span>
+</div>
+
+<div class="progress">
+<div class="progress-fill" style="width:95%"></div>
+</div>
+
+</div>
+
+<div class="glass skill-card">
+
+<div class="skill-top">
+<span>Python</span>
+<span>92%</span>
+</div>
+
+<div class="progress">
+<div class="progress-fill" style="width:92%"></div>
+</div>
+
+</div>
+
+<div class="glass skill-card">
+
+<div class="skill-top">
+<span>Power BI</span>
+<span>96%</span>
+</div>
+
+<div class="progress">
+<div class="progress-fill" style="width:96%"></div>
+</div>
+
+</div>
+
+<div class="glass skill-card">
+
+<div class="skill-top">
+<span>Tableau</span>
+<span>88%</span>
+</div>
+
+<div class="progress">
+<div class="progress-fill" style="width:88%"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<p class="section-sub">
+Premium business intelligence and machine learning solutions built for modern organizations.
+</p>
+
+<div class="projects">
+
+<div class="glass project-card">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
+<h3>Sales Performance Dashboard</h3>
+
+<p>
+Enterprise-grade Power BI dashboard tracking KPIs, revenue trends, customer insights, and sales forecasting.
+</p>
+
+<div class="tags">
+<div class="tag">Power BI</div>
+<div class="tag">SQL</div>
+<div class="tag">Analytics</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="glass project-card">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
+<h3>Customer Segmentation AI</h3>
+
+<p>
+Machine learning solution for identifying customer behavior patterns and improving targeting strategy.
+</p>
+
+<div class="tags">
+<div class="tag">Python</div>
+<div class="tag">ML</div>
+<div class="tag">Data Science</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="glass project-card">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
+<h3>Financial Forecasting System</h3>
+
+<p>
+Predictive analytics platform helping organizations forecast revenue, growth, and operational risks.
+</p>
+
+<div class="tags">
+<div class="tag">Forecasting</div>
+<div class="tag">Python</div>
+<div class="tag">BI</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">Professional Experience</h2>
+
+<p class="section-sub">
+A proven track record in analytics, reporting, and business intelligence.
+</p>
+
+<div class="timeline">
+
+<div class="glass timeline-item">
+<span>2023 — Present</span>
+<h3>Senior Data Analyst</h3>
+<p>Leading analytics initiatives, dashboard architecture, and business reporting automation.</p>
+</div>
+
+<div class="glass timeline-item">
+<span>2021 — 2023</span>
+<h3>Business Intelligence Analyst</h3>
+<p>Built enterprise dashboards and delivered strategic insights for executive decision-making.</p>
+</div>
+
+<div class="glass timeline-item">
+<span>2018 — 2021</span>
+<h3>Junior Data Analyst</h3>
+<p>Performed reporting, data cleaning, visualization, and operational analytics.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Let's Work Together</h2>
+
+<p class="section-sub">
+Ready to turn your business data into measurable growth and actionable intelligence.
+</p>
+
+<div class="contact-grid">
+
+<div class="glass contact-card">
+
+<h3>Get In Touch</h3>
+
+<p>
+Available for freelance projects, consulting, dashboard development, and business intelligence solutions.
+</p>
+
+<div class="socials">
+<a href="#" class="social">Li</a>
+<a href="#" class="social">Gh</a>
+<a href="#" class="social">Tw</a>
+</div>
+
+</div>
+
+<div class="glass contact-card">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="6" placeholder="Tell me about your project"></textarea>
+
+<button class="btn btn-primary submit-btn">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© <span id="year"></span> Saifullah Muhammad — Premium Portfolio Experience
+</footer>
+
 <script>
-theme.onclick=()=>document.body.classList.toggle('dark');
-menu.onclick=()=>nav.classList.toggle('active');
-const roles=["Data Analyst","Business Intelligence Specialist","Power BI Developer","SQL & Python Expert"];
-let i=0;setInterval(()=>typing.textContent=roles[i++%roles.length],2000);
-year.textContent=new Date().getFullYear();
+
+const body = document.body;
+const themeBtn = document.getElementById("themeBtn");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+themeBtn.onclick = () => {
+body.classList.toggle("light");
+themeBtn.textContent =
+body.classList.contains("light") ? "🌙" : "☀️";
+};
+
+menuBtn.onclick = () => {
+navLinks.classList.toggle("active");
+};
+
+const roles = [
+"Senior Data Analyst",
+"Power BI Developer",
+"Business Intelligence Expert",
+"SQL & Python Specialist",
+"Data Visualization Consultant"
+];
+
+const typing = document.getElementById("typing");
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect(){
+
+const current = roles[roleIndex];
+
+if(!deleting){
+typing.textContent = current.substring(0, charIndex++);
+if(charIndex > current.length + 1){
+deleting = true;
+setTimeout(typeEffect, 1200);
+return;
+}
+}else{
+typing.textContent = current.substring(0, charIndex--);
+if(charIndex === 0){
+deleting = false;
+roleIndex = (roleIndex + 1) % roles.length;
+}
+}
+
+setTimeout(typeEffect, deleting ? 40 : 90);
+}
+
+typeEffect();
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+window.addEventListener("scroll", () => {
+
+const header = document.querySelector("header");
+
+if(window.scrollY > 50){
+header.style.padding = "12px 0";
+}else{
+header.style.padding = "18px 0";
+}
+
+});
+
 </script>
-</body></html>
+
+</body>
+</html>
